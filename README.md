@@ -328,6 +328,7 @@ service
 -- viewBenefitsByEmployeeId
 
 
+
 Folder Structure:
 
 Markdown________________________________________
@@ -368,55 +369,101 @@ ____________________________________________
 
 Full ERD Diagram
 
+
 Mermaid_____________________________________
 
 erDiagram
+
     Employee {
+    
         int EmployeeID PK
+        
         string Name
+        
         string Department
+        
         date DateOfJoining
+        
         date DateOfLeaving
+    
     }
+    
     Attendance {
+    
         int AttendanceID PK
+        
         date Date
+        
         string Status
+        
         int EmployeeID FK
+    
     }
+    
     Payroll {
+    
         int PayrollID PK
+        
         int EmployeeID FK
+        
         decimal Salary
+        
         date Date
+    
     }
+    
     Compensation {
+    
         int CompensationID PK
+        
         int EmployeeID FK
+        
         string Type
+        
         decimal Amount
+        
         date Date
+    
     }
+    
     Benefits {
+    
         int BenefitsID PK
+        
         int EmployeeID FK
+        
         string BenefitType
+        
         string Description
+        
         date Date
+    
     }
+    
     OnboardingOffboarding {
+    
         int ProcessID PK
+        
         int EmployeeID FK
+        
         string ProcessType
+        
         date Date
+    
     }
+    
 
     Employee ||--o{ Attendance: "has"
+    
     Employee ||--o{ Payroll: "has"
+    
     Employee ||--o{ Compensation: "receives"
+    
     Employee ||--o{ Benefits: "receives"
+    
     Employee ||--o{ OnboardingOffboarding: "undergoes"
 _______________________________________________________________
+
 This scaffold provides a clear separation of concerns and modular structure, ensuring each service is independently maintainable and scalable.
 
 
