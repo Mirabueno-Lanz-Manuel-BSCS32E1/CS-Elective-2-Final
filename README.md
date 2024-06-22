@@ -30,9 +30,10 @@ ________________________________________
 Project Structure and ERD for Each Service
 
 Attendance Monitoring
+
 domain
 
--Attendance
+- Attendance
 
 -- AttendanceID (Primary Key)
 
