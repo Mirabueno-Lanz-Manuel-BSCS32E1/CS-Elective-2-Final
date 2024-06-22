@@ -73,7 +73,9 @@ service
 
 
 Folder Structure:
+
 Markdown____________________________________
+
 attendance-monitoring/
 
 │
@@ -108,45 +110,78 @@ __________________________________
 Onboarding and Offboarding
 
 domain
+
 - OnboardingOffboarding
+
 -- ProcessID (Primary Key)
+
 -- EmployeeID (Foreign Key references Employee.EmployeeID)
+
 -- ProcessType (Onboarding, Offboarding)
+
 -- Date
+
 - Employee
+
 -- EmployeeID (Primary Key)
+
 -- Name
+
 -- Department
+
 -- DateOfJoining
+
 -- DateOfLeaving
 
 repository
+
 - OnboardingOffboardingRepository (CRUD operations for OnboardingOffboarding)
+
 - EmployeeRepository (CRUD operations for Employee)
 
 service
+
 - OnboardingOffboardingService
+
 -- startOnboarding
+
 -- completeOnboarding
+
 -- startOffboarding
+
 -- completeOffboarding
 
 
 Folder Structure:
+
 Markdown_______________________________
+
 onboarding-offboarding/
+
 │
+
 ├── domain/
+
 │   ├── OnboardingOffboarding.java
+
 │   └── Employee.java
+
 │
+
 ├── repository/
+
 │   ├── OnboardingOffboardingRepository.java
+
 │   └── EmployeeRepository.java
+
 │
+
 ├── service/
+
 │   └── OnboardingOffboardingService.java
+
 └── controller/
+
     └── OnboardingOffboardingController.java
 ____________________________________________
 
@@ -156,44 +191,76 @@ ____________________________________________
 Payroll
 
 domain
+
 - Payroll
+
 -- PayrollID (Primary Key)
+
 -- EmployeeID (Foreign Key references Employee.EmployeeID)
+
 -- Salary
+
 -- Date
+
 - Employee
+
 -- EmployeeID (Primary Key)
+
 -- Name
+
 -- Department
+
 -- DateOfJoining
+
 -- DateOfLeaving
 
 repository
+
 - PayrollRepository (CRUD operations for Payroll)
+
 - EmployeeRepository (CRUD operations for Employee)
 
 service
+
 - PayrollService
+
 -- processPayroll
+
 -- generatePayslip
+
 -- viewPayrollByEmployeeId
 
 
 Folder Structure:
+
 Markdown________________________________
+
 payroll/
+
 │
+
 ├── domain/
+
 │   ├── Payroll.java
+
 │   └── Employee.java
+
 │
+
 ├── repository/
+
 │   ├── PayrollRepository.java
+
 │   └── EmployeeRepository.java
+
 │
+
 ├── service/
+
 │   └── PayrollService.java
+
 └── controller/
+
     └── PayrollController.java
 ________________________________
 
@@ -202,59 +269,107 @@ ________________________________
 Compensation and Benefits
 
 domain
+
 - Compensation
+
 -- CompensationID (Primary Key)
+
 -- EmployeeID (Foreign Key references Employee.EmployeeID)
+
 -- Type (Bonus, Allowance, etc.)
+
 -- Amount
+
 -- Date
+
 - Benefits
+
 -- BenefitsID (Primary Key)
+
 -- EmployeeID (Foreign Key references Employee.EmployeeID)
+
 -- BenefitType
+
 -- Description
+
 -- Date
+
 - Employee
+
 -- EmployeeID (Primary Key)
+
 -- Name
+
 -- Department
+
 -- DateOfJoining
+
 -- DateOfLeaving
 
+
 repository
+
 - CompensationRepository (CRUD operations for Compensation)
+
 -BenefitsRepository (CRUD operations for Benefits)
+
 - EmployeeRepository (CRUD operations for Employee)
 
 service
+
 - CompensationBenefitsService
+
 -- addCompensation
+
 -- viewCompensationByEmployeeId
+
 -- addBenefit
+
 -- viewBenefitsByEmployeeId
 
 
 Folder Structure:
+
 Markdown________________________________________
+
 compensation-benefits/
+
 │
+
 ├── domain/
+
 │   ├── Compensation.java
+
 │   ├── Benefits.java
+
 │   └── Employee.java
+
 │
+
 ├── repository/
+
 │   ├── CompensationRepository.java
+
 │   ├── BenefitsRepository.java
+
 │   └── EmployeeRepository.java
+
 │
+
 ├── service/
+
 │   └── CompensationBenefitsService.java
+
 └── controller/
+
     └── CompensationBenefitsController.java
+
 ____________________________________________
+
 Full ERD Diagram
+
 Mermaid_____________________________________
+
 erDiagram
     Employee {
         int EmployeeID PK
