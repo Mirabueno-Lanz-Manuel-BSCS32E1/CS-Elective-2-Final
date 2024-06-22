@@ -49,18 +49,31 @@ service
 Folder Structure:
 Markdown____________________________________
 attendance-monitoring/
+
 │
+
 ├── domain/
+
 │   ├── Attendance.java
+
 │   └── Employee.java
+
 │
+
 ├── repository/
+
 │   ├── AttendanceRepository.java
+
 │   └── EmployeeRepository.java
+
 │
+
 ├── service/
+
 │   └── AttendanceService.java
+
 └── controller/
+
     └── AttendanceController.java
 __________________________________
 
