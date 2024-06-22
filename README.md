@@ -9,13 +9,21 @@ Services
 General Folder Structure
 ________________________________________
 hr-application/
+
 │
+
 ├── attendance-monitoring/
+
 │
+
 ├── onboarding-offboarding/
+
 │
+
 ├── payroll/
+
 │
+
 └── compensation-benefits/
 ________________________________________
 
@@ -23,26 +31,43 @@ Project Structure and ERD for Each Service
 
 Attendance Monitoring
 domain
+
 -Attendance
+
 -- AttendanceID (Primary Key)
+
 -- Date
+
 -- Status (Present, Absent, Excused)
+
 -- EmployeeID (Foreign Key references Employee.EmployeeID)
+
 - Employee
+
 -- EmployeeID (Primary Key)
+
 -- Name
+
 -- Department
+
 -- DateOfJoining
+
 -- DateOfLeaving
 
 repository
+
 - AttendanceRepository (CRUD operations for Attendance)
+
 - EmployeeRepository (CRUD operations for Employee)
 
 service
+
 - AttendanceService
+
 -- addAttendance
+
 -- overrideAttendance
+
 -- readAttendanceOfEmployeeById
 
 
